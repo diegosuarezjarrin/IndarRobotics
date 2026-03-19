@@ -1,0 +1,81 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333333;
+}
+
+/* Header y navegación */
+header {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    padding: 20px;
+}
+
+header h1 {
+    color: #e9d945;
+}
+
+nav {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-bottom: 2px solid #e9d945;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #1a1a2e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main y footer */
+main {
+    padding: 40px;
+}
+
+footer {
+    background-color: #1a1a2e;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Inicio */
+#partes {
+    display: flex;
+    gap: 20px;
+}
+
+#partes article {
+    background-color: #ffffff;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #eeeeee;
+}
