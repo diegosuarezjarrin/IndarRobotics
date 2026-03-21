@@ -3,7 +3,13 @@ const robots = [
     { nombre: "Siemens", grados: 6, aplicacion: "Soldadura y pintura", precision: "Alta" },
     { nombre: "KUKA", grados: 3, aplicacion: "Ensamblaje", precision: "Muy alta" },
     { nombre: "FANUC", grados: 4, aplicacion: "Ensamblaje rápido", precision: "Alta" },
-    { nombre: "UR", grados: 6, aplicacion: "Trabajo con humanos", precision: "Media" }
+    { nombre: "UR", grados: 6, aplicacion: "Trabajo con humanos", precision: "Media" },
+    { nombre: "Yaskawa", grados: 6, aplicacion: "Ensamblaje de precisión", precision: "Muy alta" },
+    { nombre: "Staubli", grados: 4, aplicacion: "Manipulación de piezas pequeñas", precision: "Muy alta" },
+    { nombre: "Comau", grados: 5, aplicacion: "Ensamblaje de automoción", precision: "Alta" },
+    { nombre: "Motoman", grados: 6, aplicacion: "Manipulación de materiales", precision: "Media" },
+    { nombre: "Omron", grados: 4, aplicacion: "Ensamblaje ligero", precision: "Media" },
+    { nombre: "ABB", grados: 5, aplicacion: "Manipulación de materiales", precision: "Alta" }
 ];
 
 // Función que muestra info de cada robot en la consola

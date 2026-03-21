@@ -128,6 +128,26 @@ footer {
     color: #aaaaaa;
 }
 
+#partes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#tarjetas {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#tarjetas article img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
 /* Tecnología */
 #introduccion {
     margin-bottom: 30px;
@@ -354,4 +374,43 @@ footer a:hover {
 nav a.activo {
     color: #e9d945;
     border-bottom: 3px solid #e9d945;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    header h2 {
+        position: static;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    #partes {
+        flex-direction: column;
+    }
+
+    #sectores-aplicacion article {
+        flex-direction: column;
+    }
+
+    #sectores-aplicacion article img {
+        width: 100%;
+    }
+
+    form {
+        max-width: 100%;
+    }
 }
