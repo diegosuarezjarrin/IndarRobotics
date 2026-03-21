@@ -10,6 +10,9 @@ body {
     font-size: 16px;
     color: #333333;
     background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 img {
@@ -28,19 +31,15 @@ header {
 }
 
 header h1 {
-    color: #e9d945;
     font-size: 28px;
-}
-
-header h2 {
-    color: #aaaaaa;
-    font-weight: normal;
+    position: relative;
+    color: #e9d945;
 }
 
 nav {
     background-color: #ffffff;
+    border-bottom: 3px solid #cec03d;
     padding: 0 40px;
-    border-bottom: 2px solid #e9d945;
 }
 
 nav ul {
@@ -52,20 +51,24 @@ nav ul {
 nav a {
     color: #1a1a2e;
     text-decoration: none;
+    font-size: 15px;
     font-weight: bold;
-    padding: 14px 20px;
+    padding: 16px 24px;
     display: block;
 }
 
 nav a:hover {
     color: #e9d945;
+    border-bottom: 3px solid #e9d945;
 }
 
 /* Main y footer */
 main {
+    flex: 1;
     padding: 40px;
     max-width: 1100px;
     margin: 0 auto;
+    width: 100%;
 }
 
 footer {
@@ -76,30 +79,7 @@ footer {
     font-size: 14px;
 }
 
-footer a {
-    color: #e9d945;
-    text-decoration: none;
-}
-
 /* Inicio */
-#bienvenida {
-    background-color: #1a1a2e;
-    color: #ffffff;
-    text-align: center;
-    padding: 80px 40px;
-    margin-bottom: 40px;
-}
-
-#bienvenida h2 {
-    font-size: 36px;
-    color: #e9d945;
-    margin-bottom: 15px;
-}
-
-#bienvenida p {
-    color: #aaaaaa;
-}
-
 #partes {
     display: flex;
     gap: 20px;
@@ -108,19 +88,44 @@ footer a {
 
 #partes article {
     background-color: #ffffff;
-    padding: 20px;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     flex: 1;
     min-width: 200px;
 }
 
 #partes article h3 {
     color: #e9d945;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
 #partes article p {
     color: #555555;
+    font-size: 15px;
     line-height: 1.6;
+}
+
+/* Bienvenida */
+#bienvenida {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    text-align: center;
+    padding: 120px 80px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+}
+
+#bienvenida h2 {
+    font-size: 42px;
+    color: #e9d945;
+    margin-bottom: 15px;
+}
+
+#bienvenida p {
+    font-size: 18px;
+    color: #aaaaaa;
 }
 
 /* Tecnología */
@@ -128,10 +133,23 @@ footer a {
     margin-bottom: 30px;
 }
 
+#introduccion h2 {
+    font-size: 28px;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
 #lista-robots {
     background-color: #ffffff;
+    border-radius: 8px;
     padding: 20px;
     margin-bottom: 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+#lista-robots h2 {
+    color: #1a1a2e;
+    margin-bottom: 15px;
 }
 
 #lista-robots ul {
@@ -139,24 +157,26 @@ footer a {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
-    margin-top: 15px;
 }
 
 #lista-robots li {
     background-color: #e9d945;
-    color: #000000;
+    color: #ffffff;
     padding: 8px 16px;
+    border-radius: 20px;
     font-size: 14px;
-}
-
-#lista-robots a {
-    color: #000000;
-    text-decoration: none;
 }
 
 #tabla-1 {
     background-color: #ffffff;
+    border-radius: 8px;
     padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+#tabla-1 h2 {
+    color: #1a1a2e;
+    margin-bottom: 15px;
 }
 
 table {
@@ -167,44 +187,86 @@ table {
 th {
     background-color: #1a1a2e;
     color: #ffffff;
-    padding: 10px;
+    padding: 12px;
     text-align: left;
 }
 
 td {
-    padding: 10px;
+    padding: 12px;
     border-bottom: 1px solid #eeeeee;
     color: #555555;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+#btn-precision {
+    background-color: #e9d945;
+    color: #000000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+#btn-precision:hover {
+    background-color: #d4c73d;
+}
+
+#lista-robots a {
+    color: #000000;
+    text-decoration: none;
+}
+
+#lista-robots a:hover {
+    text-decoration: underline;
 }
 
 /* Sectores */
 #sectores-aplicacion {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
 }
 
 #sectores-aplicacion article {
     display: flex;
     gap: 20px;
+    align-items: flex-start;
     background-color: #ffffff;
+    border-radius: 8px;
     padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 #sectores-aplicacion article img {
-    width: 280px;
+    width: 300px;
+    border-radius: 6px;
+    object-fit: cover;
 }
 
 #sectores-aplicacion article h3 {
     color: #1a1a2e;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
+#sectores-aplicacion article p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555555;
+}
+
 aside {
-    margin-top: 30px;
+    margin-top: 40px;
     background-color: #1a1a2e;
     color: #ffffff;
     padding: 20px;
+    border-radius: 8px;
 }
 
 aside h3 {
@@ -223,6 +285,7 @@ form {
 
 fieldset {
     border: 1px solid #dddddd;
+    border-radius: 8px;
     padding: 20px;
     background-color: #ffffff;
     display: flex;
@@ -233,6 +296,7 @@ fieldset {
 legend {
     font-weight: bold;
     color: #1a1a2e;
+    padding: 0 8px;
 }
 
 label {
@@ -244,13 +308,22 @@ input[type="text"],
 input[type="email"],
 input[type="number"],
 input[type="date"],
+input[type="password"],
 select,
 textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #cccccc;
+    border-radius: 6px;
     font-size: 14px;
     margin-top: 4px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #e9d945;
 }
 
 button[type="submit"] {
@@ -258,10 +331,27 @@ button[type="submit"] {
     color: #000000;
     border: none;
     padding: 12px 24px;
+    border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
+    width: fit-content;
+}
+
+button[type="submit"]:hover {
+    background-color: #e9d945;
+}
+
+/* Footer enlaces */
+footer a {
+    color: #e9d945;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 nav a.activo {
     color: #e9d945;
+    border-bottom: 3px solid #e9d945;
 }
